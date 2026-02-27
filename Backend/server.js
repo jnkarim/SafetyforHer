@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 
 import authRoutes from "./routes/authRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
+import incidentRoutes from './routes/incidentRoutes.js';
 
 dotenv.config();
 
@@ -22,5 +23,6 @@ mongoose
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
+app.use('/api/incidents', incidentRoutes)
 
 app.listen(5000, () => console.log("Server running on port 5000"));
