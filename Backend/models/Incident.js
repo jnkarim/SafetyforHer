@@ -5,7 +5,8 @@ const IncidentSchema = new mongoose.Schema({
   incidentType: { type: String, required: true }, // e.g., Doxxing, Image-based Abuse
   platform: { type: String, required: true },
   description: { type: String, required: true },
-  evidenceUrl: { type: String }, // URL to uploaded screenshot
+  offenderLink: { type: String, default: null }, // URL to offender profile / post
+  evidenceUrls: [{ type: String }], // Cloudinary URLs for uploaded screenshots
   status: { type: String, default: "Pending Review" },
   createdAt: { type: Date, default: Date.now },
   // Note: No userId or IP address fields to maintain strict anonymity
