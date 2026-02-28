@@ -1,0 +1,461 @@
+{
+  "hero": {
+    "badge": "Fighting TFGBV in Bangladesh",
+    "title_line1": "Digital Violence",
+    "title_is": "is",
+    "title_line2": "Real Violence.",
+    "desc": "Technology-facilitated gender-based violence affects <strong>66% of women globally</strong>. SafetyForHer equips you with AI tools, community support, and legal guidance to fight back.",
+    "cta_help": "I Need Help Now",
+    "cta_learn": "Learn About TFGBV",
+    "stat1_label": "Women face cyber harassment",
+    "stat2_label": "Deepfakes target women",
+    "stat3_label": "AI Guardian active",
+    "quote_source": "UN Women, 2023",
+    "quote": "\"TFGBV is any act committed, assisted, or amplified by ICTs that results in physical, sexual, psychological, social, political, or economic harm.\"",
+    "abuse_types": [
+      "Sextortion & Blackmail",
+      "Image-based Abuse (IBSA)",
+      "Doxxing & Cyberstalking",
+      "Online Grooming",
+      "Deepfakes & Impersonation"
+    ]
+  },
+  "ticker": [
+    "TFGBV IS VIOLENCE",
+    "66% OF WOMEN EXPERIENCE CYBER HARASSMENT",
+    "96% OF DEEPFAKES ARE NONCONSENSUAL",
+    "YOU ARE NOT ALONE",
+    "REPORT. DOCUMENT. PROTECT.",
+    "24/7 AI SUPPORT AVAILABLE",
+    "KNOW YOUR RIGHTS IN BANGLADESH"
+  ],
+  "stats": {
+    "section_label": "Global Scenario of TFGBV",
+    "title_line1": "The Scale of the",
+    "title_line2": "Crisis.",
+    "items": [
+      {
+        "pct": "66%",
+        "type": "Cyber Harassment",
+        "desc": "of women globally report experiencing online harassment"
+      },
+      {
+        "pct": "99%",
+        "type": "Deepfake Victims",
+        "desc": "of nonconsensual sexual deepfakes target women"
+      },
+      {
+        "pct": "63%",
+        "type": "Hacking & Stalking",
+        "desc": "of women globally face tech-enabled hacking or stalking"
+      },
+      {
+        "pct": "57%",
+        "type": "Image-Based Abuse",
+        "desc": "of women report experiencing IBSA globally"
+      },
+      {
+        "pct": "55%",
+        "type": "Doxxing",
+        "desc": "of women have had private information published without consent"
+      }
+    ]
+  },
+  "types": {
+    "section_label": "Know the Threat",
+    "title_line1": "Types of",
+    "title_line2": "TFGBV.",
+    "desc": "Technology-facilitated gender-based violence takes many forms. Recognizing them is the first step to fighting back.",
+    "items": [
+      {
+        "icon": "🎭",
+        "title": "Sextortion",
+        "desc": "Blackmail using sexual photos or videos"
+      },
+      {
+        "icon": "📸",
+        "title": "Image Abuse",
+        "desc": "Sharing intimate content without consent"
+      },
+      {
+        "icon": "📍",
+        "title": "Doxxing",
+        "desc": "Publishing private personal information"
+      },
+      {
+        "icon": "💬",
+        "title": "Cyberbullying",
+        "desc": "Online gender-based harassment"
+      },
+      {
+        "icon": "👁️",
+        "title": "Cyberstalking",
+        "desc": "Tech-enabled surveillance & pursuit"
+      },
+      {
+        "icon": "🎭",
+        "title": "Impersonation",
+        "desc": "Fake accounts to harm reputation"
+      },
+      {
+        "icon": "🔓",
+        "title": "Hacking",
+        "desc": "Unauthorized account access"
+      },
+      {
+        "icon": "🤖",
+        "title": "Deepfakes",
+        "desc": "AI-generated nonconsensual content"
+      }
+    ]
+  },
+  "ai": {
+    "section_label": "AI-Powered Protection",
+    "title": "Your AI Guardian.",
+    "active": "24/7 Active",
+    "cards": [
+      {
+        "title": "Identify Threats",
+        "desc": "AI analyzes your situation to detect Catfishing, Grooming, Sextortion, or Stalking patterns instantly.",
+        "tag": "NLP Powered"
+      },
+      {
+        "title": "Platform Guides",
+        "desc": "Step-by-step reporting for Instagram, Discord, WhatsApp — without alerting the harasser.",
+        "tag": "All Platforms"
+      },
+      {
+        "title": "Red Flag Checker",
+        "desc": "Paste any message and our AI identifies grooming, manipulation, or sextortion tactics in real time.",
+        "tag": "Real-time"
+      }
+    ]
+  },
+  "scenario": {
+    "section_label": "Interactive Learning",
+    "title": "Scenario Arena.",
+    "points": [
+      "Interactive stories based on real TFGBV cases reported in Bangladesh.",
+      "Choose your path — understand consequences of each decision.",
+      "Learn legal actions under BD Cyber Security Ordinance 2024."
+    ],
+    "enter_btn": "Enter Arena",
+    "live_badge": "Live Scenario",
+    "question": "\"Someone is sharing your private photos in a Discord server without your consent...\"",
+    "options": [
+      "Report to Discord Trust & Safety immediately",
+      "Confront the person directly in the server",
+      "Document everything and contact a legal expert"
+    ],
+    "result_correct": "✓ Best response — Discord's T&S team can remove content and ban users quickly.",
+    "result_partial": "⚠ Smart move — but also report to the platform to create an official record.",
+    "result_wrong": "✗ Confronting the person may escalate the situation. Focus on reporting first.",
+    "counter": "Scenario 1 of 12",
+    "tag": "Image Abuse • Medium"
+  },
+  "legal": {
+    "section_label": "Know Your Rights",
+    "title_line1": "Legal Framework",
+    "title_line2": "in Bangladesh.",
+    "laws": [
+      {
+        "title": "Bangladesh Penal Code",
+        "subtitle": "Foundation"
+      },
+      {
+        "title": "National Women Development Policy",
+        "subtitle": "2011"
+      },
+      {
+        "title": "National Digital Security Act",
+        "subtitle": "2018"
+      },
+      {
+        "title": "Pornography Control Act",
+        "subtitle": "2012"
+      },
+      {
+        "title": "Women & Children Oppression Act",
+        "subtitle": "WCRPA"
+      },
+      {
+        "title": "Cyber Security Ordinance",
+        "subtitle": "2024"
+      }
+    ],
+    "notice": "Bangladesh's <strong>Cyber Security Ordinance 2024</strong> provides legal recourse for victims of TFGBV. Our AI helps you understand which laws apply to your situation and the steps to file a complaint. Call <strong>1090</strong> (Women Helpline) or <strong>999</strong> for emergency support."
+  },
+  "community": {
+    "section_label": "Support Network",
+    "title_line1": "You Are",
+    "title_line2": "Not Alone.",
+    "feed_title": "Community Feed.",
+    "feed_desc": "A safe, anonymous space to share stories, get peer support, and discuss digital safety with women across Bangladesh who understand.",
+    "feed_tags": [
+      "Catfishing",
+      "Stalking",
+      "Privacy",
+      "Legal Tips",
+      "Recovery"
+    ],
+    "feed_btn": "Browse Posts",
+    "sos_badge": "Emergency",
+    "sos_title": "Emergency SOS.",
+    "sos_desc": "In immediate danger? Every second counts. Contact emergency services right now.",
+    "sos_numbers": [
+      {
+        "n": "999",
+        "label": "BD Emergency"
+      },
+      {
+        "n": "1090",
+        "label": "Women Helpline"
+      }
+    ],
+    "sos_btn": "Call Now"
+  },
+  "feed": {
+    "title": "Community Feed",
+    "subtitle": "Real-time discussions & experiences",
+    "search_placeholder": "Search in community...",
+    "new_post_btn": "New Post",
+    "comments": "Comments",
+    "share": "Share",
+    "no_posts_title": "No discussions found",
+    "no_posts_desc": "Start a conversation by clicking 'New Post'",
+    "in_label": "In",
+    "general": "General",
+    "anonymous": "anonymous"
+  },
+  "scenarios": {
+    "title_main": "Security",
+    "title_accent": "Series",
+    "subtitle": "Interactive Incident Response Training",
+    "case_file": "Case File",
+    "start_btn": "Start This Series",
+    "restricted": "Series Restricted",
+    "part": "Part",
+    "unlock_note": "Resolve the active case file to unlock access to subsequent entries in the security series.",
+    "series": [
+      {
+        "title": "Digital Footprint Leak",
+        "subtitle": "Series 01: The Social Media Trail",
+        "status": "Ready",
+        "difficulty": "Level: Intermediate",
+        "description": "A single photo shared in confidence has exposed Zara's physical location. Track the leak and secure her perimeter."
+      },
+      {
+        "title": "Credential Harvest",
+        "subtitle": "Series 02: Verification Trap",
+        "status": "Restricted",
+        "difficulty": "Level: Beginner",
+        "description": "A high-pressure alert arrives in your inbox claiming an account breach. Can you identify the forgery before clicking?"
+      },
+      {
+        "title": "Persistence Protocol",
+        "subtitle": "Series 03: Escalated Threat",
+        "status": "Restricted",
+        "difficulty": "Level: Advanced",
+        "description": "When digital harassment crosses into physical space. Learn to document, report, and disappear from unwanted radars."
+      }
+    ]
+  },
+  "arena": {
+    "back": "← Back",
+    "top_label": "Scenario Arena · Doxxing & Cyberstalking",
+    "chapter": "Chapter",
+    "click_here": "Click here",
+    "for_info": "for more information!",
+    "scenes": {
+      "intro": {
+        "title": "Just Another Evening",
+        "chapterNum": "1",
+        "narration": [
+          "Zara loves sharing her life online — her artwork, her cozy room, her favourite café.",
+          "Tonight she posts a selfie with her neighbourhood tagged. \"Just vibes ✨\"",
+          "Her followers love it. She feels happy, connected… and completely safe."
+        ],
+        "infoBox": {
+          "label": "Did You Know?",
+          "text": "Over 40% of people have experienced online harassment. Small details in photos — like street signs or location tags — can reveal exactly where you live."
+        },
+        "choices": [
+          {
+            "label": "Continue the story",
+            "next": "threat",
+            "style": "primary"
+          }
+        ]
+      },
+      "threat": {
+        "title": "A Chilling Message",
+        "chapterNum": "2",
+        "narration": [
+          "Later that night, a notification lights up her phone. An unknown account sent a DM.",
+          "\"I know where you live,\" it reads.",
+          "How did they find her? She realizes — the selfie. The location tag."
+        ],
+        "infoBox": {
+          "label": "What is Doxxing?",
+          "text": "Doxxing is when someone collects your private info — like your home address — from public posts to threaten or harm you. It often starts with tiny details shared without thinking."
+        },
+        "choices": [
+          {
+            "label": "Zara must decide…",
+            "next": "decision",
+            "style": "primary"
+          }
+        ]
+      },
+      "decision": {
+        "title": "What Should Zara Do?",
+        "chapterNum": "?",
+        "narration": [
+          "Zara stares at her phone, hands trembling. Every option feels terrifying. What would YOU do?"
+        ],
+        "infoBox": {
+          "label": "Think Before You Act",
+          "text": "Your first instinct might be to reply or ignore — but neither is safest. The best response: screenshot evidence, block, then tell a trusted adult immediately."
+        },
+        "choices": [
+          {
+            "label": "Reply and ask who they are",
+            "next": "bad_engage",
+            "style": "danger",
+            "icon": "message"
+          },
+          {
+            "label": "Ignore it and hope it stops",
+            "next": "bad_ignore",
+            "style": "warning",
+            "icon": "eyeoff"
+          },
+          {
+            "label": "Screenshot, block & tell an adult",
+            "next": "good",
+            "style": "safe",
+            "icon": "shield"
+          }
+        ]
+      },
+      "bad_engage": {
+        "title": "Engaging Made It Worse",
+        "chapterNum": "X",
+        "narration": [
+          "Engagement is exactly what a harasser wants. It proves their target is 'active'.",
+          "They used her public posts to piece together her real-world identity.",
+          "Engaging confirmed she was real and frightened — exactly what the stalker wanted."
+        ],
+        "infoBox": {
+          "label": "Why Replying is Dangerous",
+          "text": "Any response — even 'stop' or 'who are you?' — tells the stalker you're real, active, and scared. Always screenshot first, then block without replying."
+        },
+        "choices": [
+          {
+            "label": "Try a different path",
+            "next": "decision",
+            "style": "primary",
+            "icon": "retry"
+          }
+        ]
+      },
+      "bad_ignore": {
+        "title": "Silence Isn't Safety",
+        "chapterNum": "!",
+        "narration": [
+          "Zara put her phone down. \"It's probably a prank,\" she told herself.",
+          "But the messages kept coming. One a day. Then three.",
+          "Ignoring it gave the stalker time and confidence."
+        ],
+        "infoBox": {
+          "label": "⚠️ Why Ignoring Isn't Enough",
+          "text": "Cyberstalking rarely stops on its own. Silence can be misread as acceptance. Documenting and reporting early gives you the most protection."
+        },
+        "choices": [
+          {
+            "label": "Try a different path",
+            "next": "decision",
+            "style": "primary",
+            "icon": "retry"
+          }
+        ]
+      },
+      "good": {
+        "title": "Zara Did the Right Thing",
+        "chapterNum": "✓",
+        "narration": [
+          "Zara took a breath and screenshotted the message first.",
+          "Then she blocked the account and went straight to her mum.",
+          "They reported it together. Zara felt shaken… but safe."
+        ],
+        "infoBox": {
+          "label": "What Zara Did Right",
+          "text": "Screenshot → Block → Report → Tell a trusted adult. Always capture evidence BEFORE blocking. Then report to the platform and, if needed, to the police."
+        },
+        "choices": [
+          {
+            "label": "Play Again",
+            "next": "intro",
+            "style": "primary",
+            "icon": "retry"
+          }
+        ]
+      }
+    }
+  },
+  "report": {
+    "badge": "Safe · Private · Encrypted",
+    "title": "Anonymous Reporting",
+    "subtitle": "Safe · Private · Encrypted",
+    "abuse_type_label": "Type of Abuse",
+    "abuse_type_placeholder": "Select Category",
+    "abuse_types": {
+      "doxxing": "Doxxing / Privacy Leak",
+      "impersonation": "Impersonation",
+      "harassment": "Cyber Harassment",
+      "images": "Image-Based Abuse"
+    },
+    "platform_label": "Platform",
+    "platform_placeholder": "e.g. Facebook, Discord",
+    "offender_link_label": "Offender Profile / Post Link",
+    "offender_link_optional": "(optional)",
+    "offender_link_placeholder": "https://facebook.com/profile/… or direct post URL",
+    "offender_link_hint": "Paste the direct link to the offending profile, post, or message thread.",
+    "description_label": "Detailed Description",
+    "description_placeholder": "Describe what happened. Do not include your real name if you wish to remain anonymous.",
+    "screenshots_label": "Screenshots / Evidence",
+    "screenshots_optional": "(optional · up to 5)",
+    "screenshots_upload_btn": "Upload Screenshots",
+    "screenshots_add_more": "Add More",
+    "anonymity_note": "Anonymity guaranteed by design.",
+    "submit_btn": "Submit Anonymous Report",
+    "processing": "Processing...",
+    "success_title": "Report Secured",
+    "success_desc": "Your identity is safe. Use this secret code to track your case status anonymously.",
+    "success_warning": "Do not lose this code!",
+    "copy_btn_copied": "Copied",
+    "back_btn": "Back to Safety Hub"
+  },
+    "status": {
+    "title": "Track Your Report",
+    "subtitle": "Enter your secret case code to check the current status",
+    "placeholder": "e.g. CASE-F43464DE",
+    "error": "Invalid case code. Please check and try again.",
+    "current_status": "Current Status",
+    "type_label": "Type",
+    "reported_on": "Reported On",
+    "note_label": "Note:",
+    "note_text": "Your report has been successfully received. Our team is currently reviewing the incident. We are taking swift action to ensure your safety.",
+    "go_back": "Go Back"
+  },
+  "sidebar": {
+    "main_menu": "Main Menu",
+    "home": "Home Feed",
+    "community": "Community Feed",
+    "series": "Scenario Arena",
+    "report": "Report Incident",
+    "status": "Track Case",
+    "guest": "Guest",
+    "anonymous": "Anonymous Session"
+  }
+}

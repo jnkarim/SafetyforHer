@@ -14,11 +14,13 @@ import {
   X
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useTranslation } from 'react-i18next';
 
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { user, logout } = useAuth();
+  const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Close sidebar on route change (mobile)
@@ -33,11 +35,11 @@ const Sidebar = () => {
   }, [mobileOpen]);
 
   const menuItems = [
-    { id: 'home',      label: 'Home Feed',       icon: <Home size={22} />,       path: '/' },
-    { id: 'community', label: 'Community Feed',   icon: <Users size={22} />,      path: '/community' },
-    { id: 'series',    label: 'Secenario Arena',  icon: <Layers size={22} />,     path: '/scenarios' },
-    { id: 'report',    label: 'Report Incident',  icon: <ShieldAlert size={22} />,path: '/report' },
-    { id: 'status',    label: 'Track Case',        icon: <Search size={22} />,     path: '/status' },
+    { id: 'home',      label: t('sidebar.home'),      icon: <Home size={22} />,       path: '/' },
+    { id: 'community', label: t('sidebar.community'), icon: <Users size={22} />,      path: '/community' },
+    { id: 'series',    label: t('sidebar.series'),    icon: <Layers size={22} />,     path: '/scenarios' },
+    { id: 'report',    label: t('sidebar.report'),    icon: <ShieldAlert size={22} />,path: '/report' },
+    { id: 'status',    label: t('sidebar.status'),    icon: <Search size={22} />,     path: '/status' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -71,7 +73,7 @@ const Sidebar = () => {
       {/* Navigation */}
       <nav className="flex-1 space-y-2">
         <p className="text-[10px] font-black text-[#3e324d] uppercase tracking-[0.25em] mb-6 ml-3">
-          Main Menu
+          {t('sidebar.main_menu')}
         </p>
 
         {menuItems.map((item) => (
@@ -106,10 +108,10 @@ const Sidebar = () => {
           </div>
           <div className="flex-1 overflow-hidden text-left">
             <p className="text-xs font-black text-white truncate uppercase">
-              {user?.username || 'Guest'}
+              {user?.username || t('sidebar.guest')}
             </p>
             <p className="text-[10px] text-[#907aa9] font-bold truncate">
-              {user?.email || 'Anonymous Session'}
+              {user?.email || t('sidebar.anonymous')}
             </p>
           </div>
           <button

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { 
   ArrowBigUp, ArrowBigDown, MessageSquare, Share2, 
   Flag, MoreHorizontal, Shield, Search 
@@ -7,7 +8,41 @@ import {
 import { getPosts } from '../api/posts';
 import CreatePost from './CreatePost'; 
 
+// ── Language Toggle (same style as Home.jsx) ──
+const LangToggle = () => {
+  const { i18n } = useTranslation();
+  const isBn = i18n.language === 'bn';
+  return (
+    <div style={{
+      display: 'flex', alignItems: 'center',
+      background: 'rgba(16,13,32,0.85)', backdropFilter: 'blur(12px)',
+      border: '1px solid rgba(255,255,255,0.1)',
+      borderRadius: 100, padding: 4, gap: 2,
+    }}>
+      <button
+        onClick={() => i18n.changeLanguage('en')}
+        style={{
+          padding: '6px 14px', borderRadius: 100, border: 'none', cursor: 'pointer',
+          fontWeight: 800, fontSize: 11, letterSpacing: '0.05em', transition: 'all 0.2s',
+          background: !isBn ? 'linear-gradient(135deg,#ff4b91,#7c3aed)' : 'transparent',
+          color: !isBn ? '#fff' : 'rgba(255,255,255,0.3)',
+        }}
+      >EN</button>
+      <button
+        onClick={() => i18n.changeLanguage('bn')}
+        style={{
+          padding: '6px 14px', borderRadius: 100, border: 'none', cursor: 'pointer',
+          fontWeight: 800, fontSize: 11, transition: 'all 0.2s',
+          background: isBn ? 'linear-gradient(135deg,#ff4b91,#7c3aed)' : 'transparent',
+          color: isBn ? '#fff' : 'rgba(255,255,255,0.3)',
+        }}
+      >বাংলা</button>
+    </div>
+  );
+};
+
 const CommunityFeed = () => {
+  const { t } = useTranslation();
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -42,27 +77,32 @@ const CommunityFeed = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#0b0813]/90 backdrop-blur-xl border-b border-[#1a1425] px-8 py-5 flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-black text-white tracking-tight">Community Feed</h2>
+          <h2 className="text-2xl font-black text-white tracking-tight">{t('feed.title')}</h2>
           <p className="text-xs text-[#907aa9] font-medium uppercase tracking-widest mt-1">
-            Real-time discussions & experiences
+            {t('feed.subtitle')}
           </p>
         </div>
 
         <div className="flex items-center gap-4">
+          {/* Search — hidden on mobile */}
           <div className="relative w-80 hidden md:block">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#3e324d]" size={18} />
             <input 
               type="text" 
-              placeholder="Search in community..." 
+              placeholder={t('feed.search_placeholder')}
               className="w-full bg-[#15101f] border border-[#1a1425] rounded-2xl py-2.5 pl-12 pr-4 text-sm focus:outline-none focus:border-[#ff4b91]/50 transition-all"
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
+
+          {/* Language Toggle */}
+          <LangToggle />
+
           <button 
             onClick={() => setIsModalOpen(true)}
             className="bg-[#ff4b91] hover:bg-[#ff75aa] text-white px-6 py-2.5 rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg shadow-[#ff4b91]/20 transition-all"
           >
-            New Post
+            {t('feed.new_post_btn')}
           </button>
         </div>
       </header>
@@ -103,10 +143,10 @@ const CommunityFeed = () => {
                         </div>
                         <div>
                           <p className="text-xs font-black text-white leading-none uppercase tracking-tighter">
-                            u/{post.author?.username || "anonymous"}
+                            u/{post.author?.username || t('feed.anonymous')}
                           </p>
                           <p className="text-[10px] text-[#907aa9] font-bold mt-1 uppercase">
-                            In <span className="text-[#ff4b91]">S/{post.category?.toUpperCase() || "GENERAL"}</span> • {new Date(post.createdAt).toLocaleDateString()}
+                            {t('feed.in_label')} <span className="text-[#ff4b91]">S/{post.category?.toUpperCase() || t('feed.general').toUpperCase()}</span> • {new Date(post.createdAt).toLocaleDateString()}
                           </p>
                         </div>
                       </div>
@@ -125,7 +165,6 @@ const CommunityFeed = () => {
                       {post.content}
                     </p>
 
-                    {/* Image thumbnail */}
                     {post.imageUrl && (
                       <div className="mb-5">
                         <img
@@ -142,13 +181,13 @@ const CommunityFeed = () => {
                         className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#907aa9] hover:text-white transition-all"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <MessageSquare size={16}/> {post.commentCount || 0} Comments
+                        <MessageSquare size={16}/> {post.commentCount || 0} {t('feed.comments')}
                       </button>
                       <button
                         className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#907aa9] hover:text-white transition-all"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <Share2 size={16}/> Share
+                        <Share2 size={16}/> {t('feed.share')}
                       </button>
                       <span className="text-[10px] text-[#3e324d] font-bold uppercase tracking-widest ml-auto">
                         👁 {post.views || 0}
@@ -166,8 +205,8 @@ const CommunityFeed = () => {
             ) : (
               <div className="text-center py-32 bg-[#15101f] rounded-[40px] border border-dashed border-[#1a1425]">
                 <Shield size={48} className="mx-auto text-[#1a1425] mb-4" />
-                <h3 className="text-[#907aa9] font-bold uppercase tracking-widest text-sm">No discussions found</h3>
-                <p className="text-[#3e324d] text-xs mt-2">Start a conversation by clicking 'New Post'</p>
+                <h3 className="text-[#907aa9] font-bold uppercase tracking-widest text-sm">{t('feed.no_posts_title')}</h3>
+                <p className="text-[#3e324d] text-xs mt-2">{t('feed.no_posts_desc')}</p>
               </div>
             )}
           </div>

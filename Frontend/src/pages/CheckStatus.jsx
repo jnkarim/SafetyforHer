@@ -1,9 +1,51 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Search, Loader2, ShieldCheck, Clock, AlertCircle, ArrowLeft } from 'lucide-react';
 import { getReportStatus } from '../api/reports_api';
 import { useNavigate } from 'react-router-dom';
 
+// ── Language toggle (same as Home.jsx & ReportIncident.jsx) ───────────────────
+const LangToggle = () => {
+  const { i18n } = useTranslation();
+  const isBn = i18n.language === 'bn';
+  return (
+    <div style={{
+      position: 'fixed', top: 20, right: 24, zIndex: 9999,
+      display: 'flex', alignItems: 'center',
+      background: 'rgba(11,8,19,0.85)', backdropFilter: 'blur(12px)',
+      border: '1px solid rgba(255,255,255,0.1)',
+      borderRadius: 100, padding: 4,
+      boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
+      fontFamily: "'Quicksand', sans-serif",
+      gap: 2,
+    }}>
+      <button
+        onClick={() => i18n.changeLanguage('en')}
+        style={{
+          padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer',
+          fontWeight: 800, fontSize: 12, letterSpacing: '0.05em',
+          transition: 'all 0.2s',
+          background: !isBn ? 'linear-gradient(135deg,#ff4b91,#8b5cf6)' : 'transparent',
+          color: !isBn ? '#fff' : 'rgba(255,255,255,0.35)',
+        }}
+      >EN</button>
+      <button
+        onClick={() => i18n.changeLanguage('bn')}
+        style={{
+          padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer',
+          fontWeight: 800, fontSize: 12, letterSpacing: '0.05em',
+          transition: 'all 0.2s',
+          background: isBn ? 'linear-gradient(135deg,#ff4b91,#8b5cf6)' : 'transparent',
+          color: isBn ? '#fff' : 'rgba(255,255,255,0.35)',
+        }}
+      >বাংলা</button>
+    </div>
+  );
+};
+
+// ── Main Component ─────────────────────────────────────────────────────────────
 const CheckStatus = () => {
+  const { t } = useTranslation();
   const [caseCode, setCaseCode] = useState('');
   const [report, setReport] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -22,7 +64,7 @@ const CheckStatus = () => {
       const response = await getReportStatus(caseCode.trim().toUpperCase());
       setReport(response.data);
     } catch (err) {
-      setError('Invalid case code. Please check and try again.');
+      setError(t('status.error'));
     } finally {
       setLoading(false);
     }
@@ -30,6 +72,7 @@ const CheckStatus = () => {
 
   return (
     <div className="min-h-screen bg-[#0b0813] p-8 font-['Quicksand'] text-white">
+      <LangToggle />
       <div className="mx-auto max-w-2xl mt-12">
 
         {/* Header */}
@@ -37,8 +80,12 @@ const CheckStatus = () => {
           <div className="inline-flex p-3 rounded-2xl bg-[#ff4b91]/10 border border-[#ff4b91]/20 mb-4">
             <Search size={32} className="text-[#ff4b91]" />
           </div>
-          <h1 className="text-3xl font-black uppercase tracking-tight">Track Your Report</h1>
-          <p className="text-[#907aa9] font-bold text-sm mt-2">Enter your secret case code to check the current status</p>
+          <h1 className="text-3xl font-black uppercase tracking-tight">
+            {t('status.title')}
+          </h1>
+          <p className="text-[#907aa9] font-bold text-sm mt-2">
+            {t('status.subtitle')}
+          </p>
         </div>
 
         {/* Search Input */}
@@ -46,7 +93,7 @@ const CheckStatus = () => {
           <div className="relative group">
             <input
               type="text"
-              placeholder="e.g. CASE-F43464DE"
+              placeholder={t('status.placeholder')}
               className="w-full bg-[#1a1425] border-2 border-white/5 p-5 rounded-3xl outline-none focus:border-[#ff4b91] transition-all text-xl font-black tracking-widest placeholder:tracking-normal placeholder:font-medium"
               value={caseCode}
               onChange={(e) => setCaseCode(e.target.value)}
@@ -74,29 +121,40 @@ const CheckStatus = () => {
             </div>
 
             <div className="space-y-6 relative z-10">
+              {/* Status */}
               <div className="flex items-center gap-4 border-b border-white/5 pb-6">
                 <div className="bg-[#10b981]/10 p-3 rounded-2xl">
                   <Clock className="text-[#10b981]" />
                 </div>
                 <div>
-                  <p className="text-xs font-black text-[#907aa9] uppercase tracking-widest">Current Status</p>
+                  <p className="text-xs font-black text-[#907aa9] uppercase tracking-widest">
+                    {t('status.current_status')}
+                  </p>
                   <p className="text-2xl font-black text-[#10b981]">{report.status}</p>
                 </div>
               </div>
 
+              {/* Meta */}
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="text-xs font-black text-[#3e324d] uppercase tracking-widest mb-1">Type</p>
+                  <p className="text-xs font-black text-[#3e324d] uppercase tracking-widest mb-1">
+                    {t('status.type_label')}
+                  </p>
                   <p className="font-bold text-white uppercase">{report.incidentType}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-black text-[#3e324d] uppercase tracking-widest mb-1">Reported On</p>
-                  <p className="font-bold text-white">{new Date(report.createdAt).toLocaleDateString('en-US')}</p>
+                  <p className="text-xs font-black text-[#3e324d] uppercase tracking-widest mb-1">
+                    {t('status.reported_on')}
+                  </p>
+                  <p className="font-bold text-white">
+                    {new Date(report.createdAt).toLocaleDateString('en-US')}
+                  </p>
                 </div>
               </div>
 
+              {/* Note */}
               <div className="bg-[#0b0813] p-4 rounded-2xl text-sm text-[#907aa9] leading-relaxed border border-white/5">
-                <strong>Note:</strong> Your report has been successfully received. Our team is currently reviewing the incident. We are taking swift action to ensure your safety.
+                <strong>{t('status.note_label')}</strong> {t('status.note_text')}
               </div>
             </div>
           </div>
@@ -106,7 +164,7 @@ const CheckStatus = () => {
           onClick={() => navigate('/')}
           className="mt-12 flex items-center gap-2 mx-auto text-[#3e324d] hover:text-[#ff4b91] font-black uppercase text-xs tracking-widest transition-all"
         >
-          <ArrowLeft size={16} /> Go Back
+          <ArrowLeft size={16} /> {t('status.go_back')}
         </button>
       </div>
 
