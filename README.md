@@ -2,6 +2,10 @@
 
 SafetyforHer is a full-stack web application built to help women and vulnerable users learn about online safety, share community stories, and report technology-facilitated abuse anonymously. The project includes a React frontend and an Express/MongoDB backend with authentication, community posts, anonymous incident reporting, image uploads, and interactive safety scenarios.
 
+<p align="center">
+  <img src="home.jfif" alt="BookCycle Landing Page" width="600">
+</p>
+
 ## Table of Contents
 
 - [Features](#features)
